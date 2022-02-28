@@ -3,3 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+.debug{
+    border: 2px dashed rgb(230, 19, 19);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 1152px;
+    height: 650px;
+    background-color: #e6ddd4 ;
+
+}
+
+.box-preview, .box-msg{
+    display: flex;
+}
+.box-preview{
+  flex-basis: 40%;
+
+}
+.box-msg{
+    flex-basis: 60%;
+   
+
+}
+.header__box-msg, 
+.header__box-pre {
+    width: 100%;
+    height: 45px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
