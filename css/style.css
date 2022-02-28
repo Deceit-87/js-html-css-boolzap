@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #d3dcd9;
 }
 
 .container {
@@ -23,9 +24,11 @@ body {
 
 .box-preview, .box-msg{
     display: flex;
+    flex-direction: column;
 }
 .box-preview{
   flex-basis: 40%;
+  background-color: #ffffff ;
 
 }
 .box-msg{
@@ -41,4 +44,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.footer__box-msg{
+    width: 100%;
+    height: 70px;
+    background-color: #f4eeea;
+    display: flex;
+    align-items: center;
+}
+.footer__box-msg .icon-wrapper{
+    width: 50px;
+}
+.footer__box-msg .box-type-msg .add-msg , .footer__box-msg .box-type-msg{
+ width: 100%;
+}
+.footer__box-msg .box-type-msg .add-msg{
+    border-radius: 10px;
+    height: 55px;
+    border: none;
+  }
+.main__bos-msg{
+    flex-grow: 1;
 }
