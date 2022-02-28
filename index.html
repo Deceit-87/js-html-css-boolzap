@@ -4,53 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="container debug">
+    <div class="container ">
 
 
          <!-- CONTATTI + ANTEPRIMA MSG     -->
 
-        <div class="box-preview debug">
+        <div class="box-preview ">
             <div class="header__box-pre ">
-                <div class="profile-img">
-                    img profilo
+                <div class="profile-wrapper">
+                    <div class="profile-img">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p class="profile-name">Manu</p>
                 </div>
                 <div class="icon-wrapper">
-                    icone
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
+            </div>
+
+            <div class="main__box-pre">
+                <ul>
+                    <li class="message-pre">
+                        <div class="profile-img">
+                            <img src="https://picsum.photos/200/300" alt="">
+                        </div>
+                        <div class="profile-wrapper">
+                            
+                            <div class="text-content-pre">
+                                <p class="profile-name">Manu</p>
+                                <p class="content-message-pre">asdasajdjsfsfajdjajja</p>
+                            </div>
+                            <div class="message-time">
+                                    28/12/22 15:30
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message-pre">
+                        <div class="profile-img">
+                            <img src="https://picsum.photos/200/300" alt="">
+                        </div>
+                        <div class="profile-wrapper">
+                            
+                            <div class="text-content-pre">
+                                <p class="profile-name">Manu</p>
+                                <p class="content-message-pre">asdasajdjsfsfajdjajja</p>
+                            </div>
+                            <div class="message-time">
+                                    28/12/22 15:30
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message-pre">
+                        <div class="profile-img">
+                            <img src="https://picsum.photos/200/300" alt="">
+                        </div>
+                        <div class="profile-wrapper">
+                            
+                            <div class="text-content-pre">
+                                <p class="profile-name">Manu</p>
+                                <p class="content-message-pre">asdasajdjsfsfajdjajja</p>
+                            </div>
+                            <div class="message-time">
+                                    28/12/22 15:30
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
                   <!-- CHAT-BOX -->
 
 
-        <div class="box-msg debug">
+        <div class="box-msg ">
             <div class="header__box-msg ">
-                <div class="profile-img">
-                    img profilo
+                <div class="profile-wrapper">
+                    <div class="profile-img">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p class="profile-name">Sara</p>
                 </div>
                 <div class="icon-wrapper">
-                    icone
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
                 </div>
 
             </div>
-            <div class="main__bos-msg">
-
+            <div class="main__box-msg">
+                <div class="msg-wrapper received">
+                    <div class="msg-received">
+                        <p>
+                            ciao!!
+                        </p>
+                    </div>
+                </div>
+                <div class="msg-wrapper send">
+                    <div class="msg-send">
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        Vitae ipsum quis deserunt hic?
+                        Nostrum labore dolores porro atque?
+                        Modi cupiditate nisi ratione ullam.
+                        Quo quos et eligendi cum?
+                        </p>
+                    </div>
+                </div>
+                <div class="msg-wrapper received">
+                    <div class="msg-received">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo laborum debitis dignissimos modi in porro cum, officiis neque eius mollitia minus ut itaque ratione. Alias totam facere animi dignissimos fugit.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="footer__box-msg">
                 <div class="icon-wrapper">
-                    icone
+                    <i class="fa-solid fa-face-smile"></i>
                 </div>
                 <div class="box-type-msg">
-                    <input class="add-msg" type="text" placeholder="   Scrivi un messaggio">
+                    <input class="add-msg" type="text" placeholder=" Scrivi un messaggio">
                 </div>
                 <div class="icon-wrapper">
-                    icone
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>
 
