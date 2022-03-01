@@ -2,7 +2,7 @@
 const app = new Vue({
  el: '#app',
  data: {
-     
+    currentIndex : -1 ,
     contatti: [
         
             {
@@ -77,6 +77,15 @@ const app = new Vue({
 
        },
 methods:{
+        clickSelected: function(index){
+
+            this.currentIndex = index
+            console.log(index)
+        }
+
+
+
+
 }
    
 })

@@ -22,8 +22,8 @@ body {
 
 .container {
     display: flex;
-    width: 1152px;
-    height: 650px;
+    max-width: 1152px;
+     min-height: 650px;
     background-color: #e6ddd4 ;
 
 }
@@ -154,6 +154,7 @@ justify-content: flex-end;
 
 /* ANTEPRIMA MESSAGGI */
 .message-pre{
+    position: relative;
 padding: 5px 5px;
 display: flex;
 }
@@ -186,4 +187,11 @@ display: flex;
     flex-direction: column;
     font-size: 12px;
     flex-grow: 1;
+}
+
+
+
+
+.selected {
+    background-color: #b1b1b1;
 }

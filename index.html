@@ -33,7 +33,12 @@
 
                 <div class="main__box-pre">
                     <ul>
-                        <li v-for="(element,index) in contatti" class="message-pre">
+
+
+                        <li v-for="(element,index) in contatti" 
+                        class="message-pre"
+                        @click="clickSelected(index)"
+                        :class="currentIndex === index ? 'selected' : ''">
                             <div class="profile-img">
                                 <img :src="element.avatar" alt="">
                             </div>
