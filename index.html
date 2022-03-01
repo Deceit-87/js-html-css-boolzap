@@ -63,11 +63,13 @@
 
             <div class="box-msg ">
                 <div class="header__box-msg ">
-                    <div class="profile-wrapper">
+                    <div class="profile-wrapper"
+                    v-for="(element,index) in contatti"
+                    :class="currentIndex == index ? 'active' : '' ">
                         <div class="profile-img">
-                            <i class="fa-solid fa-user"></i>
+                           <img :src="element.avatar" alt="">
                         </div>
-                        <p class="profile-name">Sara</p>
+                        <p class="profile-name">{{element.name}}</p>
                     </div>
                     <div class="icon-wrapper">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -78,14 +80,19 @@
 
                 </div>
                 <div class="main__box-msg">
-                    <div class="msg-wrapper received">
-                        <div class="msg-received">
+                    <div 
+                     class="msg-wrapper"
+                     v-for="(element,index) in contatti"
+                     :class="currentIndex == index ? 'active' : '' " >
+                        <div class="msg"
+                        v-for="(messages,index) in element.messages"
+                        :class="messages.status === 'sent' ? 'send' : 'received'">
                             <p>
-                                ciao!!
+                                {{messages.text}}
                             </p>
                         </div>
                     </div>
-                    <div class="msg-wrapper send">
+                    <!-- <div class="msg-wrapper send">
                         <div class="msg-send">
                             <p>
                                 Lorem ipsum dolor sit amet.
@@ -95,13 +102,13 @@
                             Quo quos et eligendi cum?
                             </p>
                         </div>
-                    </div>
-                    <div class="msg-wrapper received">
+                    </div> -->
+                    <!-- <div class="msg-wrapper received">
                         <div class="msg-received">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo laborum debitis dignissimos modi in porro cum, officiis neque eius mollitia minus ut itaque ratione. Alias totam facere animi dignissimos fugit.
                             </p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="footer__box-msg">

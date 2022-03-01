@@ -2,7 +2,9 @@
 const app = new Vue({
  el: '#app',
  data: {
-    currentIndex : -1 ,
+    currentIndex : -1,
+    
+
     contatti: [
         
             {
@@ -38,12 +40,12 @@ const app = new Vue({
                 },
                 {
                 date: '10/01/2020 15:50:00',
-                text: 'Ricordati di dargli da mangiare',
+                text: 'staremo a vedere',
                 status: 'sent'
                 },
                 {
                 date: '10/01/2020 16:15:22',
-                text: 'Tutto fatto!',
+                text: 'perfetto!',
                 status: 'received'
                 }]
             },
@@ -59,12 +61,12 @@ const app = new Vue({
                     },
                     {
                     date: '10/01/2020 15:50:00',
-                    text: 'Ricordati di dargli da mangiare',
+                    text: 'Ricordati!',
                     status: 'sent'
                     },
                     {
                     date: '10/01/2020 16:15:22',
-                    text: 'Tutto fatto!',
+                    text: 'si si tutto confermato, alle 20',
                     status: 'received'
                     }
             ]}
@@ -72,7 +74,7 @@ const app = new Vue({
    
    
             ],
-
+          
                 
 
        },
@@ -81,17 +83,18 @@ methods:{
 
             this.currentIndex = index
             console.log(index)
-        }
+        },
 
+
+        
 
 
 
 }
-   
+
 })
                    
     
-
 
 
 

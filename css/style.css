@@ -22,7 +22,7 @@ body {
 
 .container {
     display: flex;
-    max-width: 1152px;
+    width: 1152px;
      min-height: 650px;
     background-color: #e6ddd4 ;
 
@@ -33,13 +33,13 @@ body {
     flex-direction: column;
 }
 .box-preview{
-  flex-basis: 40%;
-  background-color: #ffffff ;
+     flex-basis: 40%;
+     background-color: #ffffff ;
 
 }
 .box-msg{
-    flex-basis: 60%;
-   border-left: 1px solid #d3d3d3;
+     flex-basis: 60%;
+     border-left: 1px solid #d3d3d3;
 
 }
 .header__box-msg, 
@@ -49,7 +49,7 @@ body {
     background-color: #eaeaea;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .footer__box-msg{
     width: 100%;
@@ -64,7 +64,7 @@ body {
     text-align: center;
 }
 .footer__box-msg .box-type-msg .add-msg , .footer__box-msg .box-type-msg{
- width: 100%;
+    width: 100%;
 }
 .footer__box-msg .box-type-msg .add-msg{
     font-size: 15px;
@@ -101,6 +101,9 @@ body {
     justify-content: start;
     align-items: center;
 }
+.header__box-msg .profile-wrapper{
+    display:none;
+}
 .profile-wrapper{
     position: relative;
     display: flex;
@@ -116,47 +119,45 @@ body {
 }
 
         /* STYLE MESSAGGE */
-.msg-send,.msg-received{
-    max-width: 60%;
-}
-.msg-send p{
-background-color: #c7ffba;
-width: fit-content;
-padding: 7px;
-border-radius: 5px;
 
-}
-.msg-received p{
-    border-radius: 5px;
-    padding: 7px;
-    width: fit-content;
-    
-background-color: white;
+.active{
+    display: flex !important;
 }
 .msg-wrapper{
+   flex-direction: column;
     max-width: 100%;
-}
-.msg-wrapper{
-    display: flex;
+    display: none;
     padding: 7px;
 }
 .send{
-justify-content: flex-end;
-
-}
-.msg-wrapper .received {
+    background-color: #c7ffba;
+    padding: 7px;
+    border-radius: 5px;
     display: flex;
-    justify-content: start;
+    align-self: end;
+
+}
+.received {
+    border-radius: 5px;
+    padding: 7px;
+    width: fit-content;
+    background-color: white;
+    
+    display: flex;
+    justify-content: flex-end;
 }
 
+.msg {
+    margin: 5px 0;
+}
 
 
 
 /* ANTEPRIMA MESSAGGI */
 .message-pre{
     position: relative;
-padding: 5px 5px;
-display: flex;
+    padding: 5px 5px;
+    display: flex;
 }
 .message-pre .profile-wrapper:after{
     display: block;
