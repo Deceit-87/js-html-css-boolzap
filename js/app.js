@@ -2,7 +2,8 @@
 const app = new Vue({
  el: '#app',
  data: {
-    currentIndex : 0,
+    search: '',
+    currentIndex : -1,
     newMessage: '',
     
 
@@ -52,7 +53,7 @@ const app = new Vue({
             },
             {
               name: 'Fabio',
-              avatar: '_2',
+              avatar: 'https://picsum.photos/id/3/200/300',
               visible: true,
               messages: [
               {
@@ -74,7 +75,7 @@ const app = new Vue({
               },
               {
               name: 'Samuele',
-              avatar: '_3',
+              avatar: 'https://picsum.photos/id/4/200/300',
               visible: true,
               messages: [
               {
@@ -96,7 +97,7 @@ const app = new Vue({
               },
               {
               name: 'Luisa',
-              avatar: '_4',
+              avatar: 'https://picsum.photos/id/5/200/300',
               visible: true,
               messages: [
               {
@@ -113,7 +114,7 @@ const app = new Vue({
               },
                 {
                     name: 'Ale',
-                    avatar: 'https://picsum.photos/id/3/200/300',
+                    avatar: 'https://picsum.photos/id/6/200/300',
                     visible: true,
                     messages: [
                     {
@@ -179,7 +180,7 @@ methods:{
               this.contatti[index].messages.push(item);
           },
 
-          
+     
 
             
 
