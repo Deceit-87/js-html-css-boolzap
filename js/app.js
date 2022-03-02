@@ -85,10 +85,10 @@ methods:{
             this.currentIndex = index
         },
         sendMessage: function(currentIndex){
-            
+            const d = new Date()
             if(this.newMessage !== ''){
               const item = {
-                date: '2/02/2022 02:33:45',
+                date: `${d.getDate()}/${d.getMonth()+1}/${d.getFullyear()}/${d.getHours()}/${d.getMinutes()}/${d.getSeconds()}`,
                 text: this.newMessage,
                 status: 'sent',
               };
