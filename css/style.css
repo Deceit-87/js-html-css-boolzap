@@ -81,6 +81,8 @@ body {
 .main__box-msg{
     padding: 70px;
     flex-grow: 1;
+    max-height: 535px;
+    overflow: scroll;
 }
 .profile-img{
     height: 33px;

@@ -3,6 +3,7 @@ const app = new Vue({
  el: '#app',
  data: {
     currentIndex : -1,
+    newMessage: '',
     
 
     contatti: [
@@ -15,7 +16,7 @@ const app = new Vue({
                 {
                 date: '10/01/2020 15:30:55',
                 text: 'Hai portato a spasso il cane?',
-                status: 'sent'
+                status: 'received'
                 },
                 {
                 date: '10/01/2020 15:50:00',
@@ -82,9 +83,22 @@ methods:{
         clickSelected: function(index){
 
             this.currentIndex = index
-            console.log(index)
         },
+        sendMessage: function(currentIndex){
+            
+            if(this.newMessage !== ''){
+              const item = {
+                date: '2/02/2022 02:33:45',
+                text: this.newMessage,
+                status: 'sent',
+              };
+              this.contatti[currentIndex].messages.push(item);
+              this.newMessage = '';
+            }
+      
+          },
 
+          
 
         
 
@@ -95,8 +109,6 @@ methods:{
 })
                    
     
-
-
 
 
 
