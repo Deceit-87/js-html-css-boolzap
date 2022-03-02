@@ -179,6 +179,18 @@ methods:{
 
               this.contatti[index].messages.push(item);
           },
+          findChat: function(){
+            for (i = 0; i < this.contatti.length; i++){
+              
+              if (this.contatti[i].name.toLowerCase().includes(this.search.toLowerCase())){
+                this.contatti[i].visible = true
+                console.log( this.contatti[i].visible)
+              } else {
+                this.contatti[i].visible = false
+                console.log( this.contatti[i].visible , this.contatti[i])
+              }
+            }
+          },
 
      
 

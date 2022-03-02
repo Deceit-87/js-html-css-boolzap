@@ -32,13 +32,14 @@
                 </div>
 
                 <div class="main__box-pre">
-                    <div class="search-wrapper">
+                    <div class="search-wrapper"
+                    >
                         <button>
                           <i class="fas fa-search"></i>
                         </button>
                         <input type="text" name=""
                          class="search" placeholder="cerca o inizia una nuova chat" 
-                         v-model='search' 
+                         v-model='search'
                          @keyup='findChat()'>
                       </div>
                     <ul>
@@ -47,7 +48,9 @@
                         <li v-for="(element,index) in contatti" 
                         class="message-pre"
                         @click="clickSelected(index)"
-                        :class="currentIndex === index ? 'selected' : ''">
+                        :class="[currentIndex === index ? 'selected' : '' , element.visible == false ? 'inactive' : 'active']"
+                   
+                        >
                             <div class="profile-img">
                                 <img :src="element.avatar" alt="">
                             </div>
