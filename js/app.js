@@ -2,7 +2,7 @@
 const app = new Vue({
  el: '#app',
  data: {
-    currentIndex : -1,
+    currentIndex : 0,
     newMessage: '',
     
 
@@ -50,6 +50,67 @@ const app = new Vue({
                 status: 'received'
                 }]
             },
+            {
+              name: 'Fabio',
+              avatar: '_2',
+              visible: true,
+              messages: [
+              {
+              date: '20/03/2020 16:30:00',
+              text: 'Ciao come stai?',
+              status: 'sent'
+              },
+              {
+              date: '20/03/2020 16:30:55',
+              text: 'Bene grazie! Stasera ci vediamo?',
+              status: 'received'
+              },
+              {
+              date: '20/03/2020 16:35:00',
+              text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+              status: 'sent'
+              }
+              ],
+              },
+              {
+              name: 'Samuele',
+              avatar: '_3',
+              visible: true,
+              messages: [
+              {
+              date: '28/03/2020 10:10:40',
+              text: 'La Marianna va in campagna',
+              status: 'received'
+              },
+              {
+              date: '28/03/2020 10:20:10',
+              text: 'Sicuro di non aver sbagliato chat?',
+              status: 'sent'
+              },
+              {
+              date: '28/03/2020 16:15:22',
+              text: 'Ah scusa!',
+              status: 'received'
+              }
+              ],
+              },
+              {
+              name: 'Luisa',
+              avatar: '_4',
+              visible: true,
+              messages: [
+              {
+              date: '10/01/2020 15:30:55',
+              text: 'Lo sai che ha aperto una nuova pizzeria?',
+              status: 'sent'
+              },
+              {
+              date: '10/01/2020 15:50:00',
+              text: 'Si, ma preferirei andare al cinema',
+              status: 'received'
+              }
+              ],
+              },
                 {
                     name: 'Ale',
                     avatar: 'https://picsum.photos/id/3/200/300',
@@ -79,26 +140,48 @@ const app = new Vue({
                 
 
        },
+
 methods:{
+        // lastMessages:function (i) {
+        //   const i = this.contatti[this.currentIndex].messages.length -1
+        //   return this.contatti[this.currentIndex].messages[i].text
+          
+        // },
         clickSelected: function(index){
 
             this.currentIndex = index
         },
         sendMessage: function(currentIndex){
+            const index = this.currentIndex
             const d = new Date()
             if(this.newMessage !== ''){
               const item = {
-                date: `${d.getDate()}/${d.getMonth()+1}/${d.getFullyear()}/${d.getHours()}/${d.getMinutes()}/${d.getSeconds()}`,
+                date: `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}/${d.getHours()}/${d.getMinutes()}/${d.getSeconds()}`,
                 text: this.newMessage,
                 status: 'sent',
               };
-              this.contatti[currentIndex].messages.push(item);
+              this.contatti[index].messages.push(item);
               this.newMessage = '';
+              setTimeout( () =>{
+                this.reply(index)
+              },3000);
             }
       
           },
+          reply:function(index){
+            const d = new Date()
+            const item = {
+              date: `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}/${d.getHours()}/${d.getMinutes()}/${d.getSeconds()}`,
+              text: 'ok',
+              status: 'received',
+            };
+
+              this.contatti[index].messages.push(item);
+          },
 
           
+
+            
 
         
 
