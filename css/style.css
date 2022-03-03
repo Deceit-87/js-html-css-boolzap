@@ -134,13 +134,27 @@ body {
     display: none;
     padding: 7px;
 }
+.msg span{
+    font-size: 10px;
+
+}
+.msg.send{
+    flex-direction: column;
+    align-items: end;
+}
+
 .send{
     background-color: #c7ffba;
     padding: 7px;
     border-radius: 5px;
     display: flex;
     align-self: end;
-
+}
+.msg.received span{
+    align-self: end;
+}
+.msg.received{
+    flex-direction: column;
 }
 .received {
     border-radius: 5px;

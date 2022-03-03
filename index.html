@@ -104,6 +104,9 @@
                             <p>
                                 {{messages.text}}
                             </p>
+                            <span class="date">
+                                {{messages.date}}
+                            </span>
                         </div>
                     </div>
                     <!-- <div class="msg-wrapper send">
@@ -135,7 +138,7 @@
                          type="text" 
                          placeholder=" Scrivi un messaggio"
                           v-model='newMessage'
-                          @keyUp.enter='sendMessage(currentIndex)'>
+                          @keyUp.enter='sendMessage(currentIndex) ,updateScroll()'>
                     </div>
                     <div class="icon-wrapper">
                         <i class="fa-solid fa-microphone"></i>

@@ -172,7 +172,7 @@ methods:{
           reply:function(index){
             const d = new Date()
             const item = {
-              date: `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}/${d.getHours()}/${d.getMinutes()}/${d.getSeconds()}`,
+              date: `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}' '${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`,
               text: 'ok',
               status: 'received',
             };
@@ -182,16 +182,20 @@ methods:{
           findChat: function(){
             for (i = 0; i < this.contatti.length; i++){
               
-              if (this.contatti[i].name.toLowerCase().includes(this.search.toLowerCase())){
+              if ( this.contatti[i].name.toLowerCase().includes( this.search.toLowerCase() ) ){
                 this.contatti[i].visible = true
-                console.log( this.contatti[i].visible)
+                console.log( this.contatti[i].visible )
               } else {
                 this.contatti[i].visible = false
                 console.log( this.contatti[i].visible , this.contatti[i])
               }
             }
           },
-
+         updateScroll: function() {
+            const msgBox = document.querySelector(".msg-wrapper");
+            msgBox.scrollTop = msgBox.scrollHeight;
+            console.log(msgBox)
+    },
      
 
             
